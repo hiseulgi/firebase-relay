@@ -14,9 +14,9 @@ databaseRelay1.on(
         relay1Read = snapshot.val();
         console.log(relay1Read);
         if (relay1Read == "on") {
-            document.getElementById("btn-relay1").className = "btn-success btn btn-lg";
+            document.getElementById("btn-relay1").className = "btn-success btn btn-lg btn-relay";
         } else {
-            document.getElementById("btn-relay1").className = "btn-danger btn btn-lg";
+            document.getElementById("btn-relay1").className = "btn-danger btn btn-lg btn-relay";
         }
     }
 );
@@ -27,9 +27,9 @@ databaseRelay2.on(
         relay2Read = snapshot.val();
         console.log(relay2Read);
         if (relay2Read == "on") {
-            document.getElementById("btn-relay2").className = "btn-success btn btn-lg";
+            document.getElementById("btn-relay2").className = "btn-success btn btn-lg btn-relay";
         } else {
-            document.getElementById("btn-relay2").className = "btn-danger btn btn-lg";
+            document.getElementById("btn-relay2").className = "btn-danger btn btn-lg btn-relay";
         }
     }
 );
@@ -40,9 +40,9 @@ databaseRelay3.on(
         relay3Read = snapshot.val();
         console.log(relay2Read);
         if (relay3Read == "on") {
-            document.getElementById("btn-relay3").className = "btn-success btn btn-lg";
+            document.getElementById("btn-relay3").className = "btn-success btn btn-lg btn-relay";
         } else {
-            document.getElementById("btn-relay3").className = "btn-danger btn btn-lg";
+            document.getElementById("btn-relay3").className = "btn-danger btn btn-lg btn-relay";
         }
     }
 );
@@ -53,9 +53,9 @@ databaseRelay4.on(
         relay4Read = snapshot.val();
         console.log(relay4Read);
         if (relay4Read == "on") {
-            document.getElementById("btn-relay4").className = "btn-success btn btn-lg";
+            document.getElementById("btn-relay4").className = "btn-success btn btn-lg btn-relay";
         } else {
-            document.getElementById("btn-relay4").className = "btn-danger btn btn-lg";
+            document.getElementById("btn-relay4").className = "btn-danger btn btn-lg btn-relay";
         }
     }
 );

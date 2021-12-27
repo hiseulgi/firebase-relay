@@ -17,6 +17,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -26,7 +27,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
 
     <script>
-        // REPLACE WITH YOUR web app's Firebase configuration
         var firebaseConfig = {
             apiKey: "AIzaSyBV6o9aN2sAaWco5IbKqs2UpKS850_98io",
             authDomain: "fir-relay-1fd67.firebaseapp.com",
@@ -53,13 +53,12 @@
     <div class="container" style="text-align:center">
         <h5>--- Relays ---</h5>
         <div class="btn-group-lg " role="group" aria-label="Relay Buttons">
-            <button type="button btn-lg" class="btn btn-lg" id="btn-relay1" onclick="relayControl('relay1')">_</button>
-            <button type="button btn-lg" class="btn btn-lg" id="btn-relay2" onclick="relayControl('relay2')">_</button>
+            <button type="button btn-lg" class="btn btn-lg" id="btn-relay1" onclick="relayControl('relay1')"></button>
+            <button type="button btn-lg" class="btn btn-lg" id="btn-relay2" onclick="relayControl('relay2')"></button>
         </div>
-        <br>
         <div class="btn-group-lg " role="group" aria-label="Relay Buttons">
-            <button type="button btn-lg" class="btn btn-lg" id="btn-relay3" onclick="relayControl('relay3')">_</button>
-            <button type="button btn-lg" class="btn btn-lg" id="btn-relay4" onclick="relayControl('relay4')">_</button>
+            <button type="button btn-lg" class="btn btn-lg" id="btn-relay3" onclick="relayControl('relay3')"></button>
+            <button type="button btn-lg" class="btn btn-lg" id="btn-relay4" onclick="relayControl('relay4')"></button>
         </div>
     </div>
 </body>
