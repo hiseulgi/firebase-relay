@@ -1,0 +1,67 @@
+<!-- Complete Project Details at: https://RandomNerdTutorials.com/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP Firebase App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+    <script>
+        // REPLACE WITH YOUR web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBV6o9aN2sAaWco5IbKqs2UpKS850_98io",
+            authDomain: "fir-relay-1fd67.firebaseapp.com",
+            databaseURL: "https://fir-relay-1fd67-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "fir-relay-1fd67",
+            storageBucket: "fir-relay-1fd67.appspot.com",
+            messagingSenderId: "422287883284",
+            appId: "1:422287883284:web:f175bf0e2ef777b1233b01"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+    </script>
+    <script src="app.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid" style="text-align:center">
+        <h1 class="text-primary">Kontrol Relay dengan Firebase</h1>
+    </div>
+
+    <div class="container" style="text-align:center">
+        <h5>--- Relays ---</h5>
+        <div class="btn-group-lg " role="group" aria-label="Relay Buttons">
+            <button type="button btn-lg" class="btn btn-lg" id="btn-relay1" onclick="relayControl('relay1')">_</button>
+            <button type="button btn-lg" class="btn btn-lg" id="btn-relay2" onclick="relayControl('relay2')">_</button>
+        </div>
+        <br>
+        <div class="btn-group-lg " role="group" aria-label="Relay Buttons">
+            <button type="button btn-lg" class="btn btn-lg" id="btn-relay3" onclick="relayControl('relay3')">_</button>
+            <button type="button btn-lg" class="btn btn-lg" id="btn-relay4" onclick="relayControl('relay4')">_</button>
+        </div>
+    </div>
+</body>
+
+</html>
