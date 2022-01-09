@@ -1,5 +1,18 @@
+html { overflow-y: hidden; }
+
 .btn-relay{
     display: inline-block;
-    padding-top: 3em !important;
-    margin-bottom: 0.2em;
+    margin-right: 0.6em;
+    margin-left: 0.6em;
+    width: 75px;
+    display: inline-block;
+    transform:rotate(-90deg);
+}
+
+.btn-relay-mobile{
+    display: inline-block;
+    margin-right: 0.6em;
+    margin-left: 0.6em;
+    width: 75px;
+    display: inline-block;
 }

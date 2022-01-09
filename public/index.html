@@ -1,4 +1,3 @@
-<!-- Complete Project Details at: https://RandomNerdTutorials.com/ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESP Firebase App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -17,13 +18,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/6.1.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
 
     <script>
@@ -41,26 +41,68 @@
         var database = firebase.database();
     </script>
     <script src="app.js" defer></script>
-
+    <script src="sketch.js" defer></script>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" width="50" height="50" alt="">
+        </a>
+        <div class="h4">Sistem Monitoring PMT Gardu Induk 150kV Tambak Lorok</div>
+        <a href="tabel.html">
+            <button type="button btn-lg" class="btn btn-primary btn-sm">History PMT</button>
+        </a>
+    </nav>
 
-    <div class="jumbotron jumbotron-fluid" style="text-align:center">
-        <h1 class="text-primary">Kontrol Relay dengan Firebase</h1>
+    <!-- display on desktop web -->
+    <div class="container d-none d-md-block" style="text-align:center">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
+            <button type="button" class="btn-relay btn-relay1">PMTA9</button>
+            <button type="button" class="btn-relay btn-relay4">PMTA10</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
+            <button type="button" class="btn-relay btn-relay2">PMTAB9</button>
+            <button type="button" class="btn-relay btn-relay5">PMTAB10</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
+            <button type="button" class="btn-relay btn-relay3">PMTB9</button>
+            <button type="button" class="btn-relay btn-relay6">PMTB10</button>
+        </div>
     </div>
 
-    <div class="container" style="text-align:center">
-        <h5>--- Relays ---</h5>
-        <div class="btn-group-lg " role="group" aria-label="Relay Buttons">
-            <button type="button btn-lg" class="btn btn-lg" id="btn-relay1" onclick="relayControl('relay1')"></button>
-            <button type="button btn-lg" class="btn btn-lg" id="btn-relay2" onclick="relayControl('relay2')"></button>
+    <!-- display on mobile web -->
+    <div class="container d-block d-md-none" style="text-align:center">
+        <br>
+        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
+            <button type="button" class="btn-relay-mobile btn-relay1">PMTA9</button>
+            <button type="button" class="btn-relay-mobile btn-relay4">PMTA10</button>
         </div>
-        <div class="btn-group-lg " role="group" aria-label="Relay Buttons">
-            <button type="button btn-lg" class="btn btn-lg" id="btn-relay3" onclick="relayControl('relay3')"></button>
-            <button type="button btn-lg" class="btn btn-lg" id="btn-relay4" onclick="relayControl('relay4')"></button>
+        <br>
+        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
+            <button type="button" class="btn-relay-mobile btn-relay2">PMTAB9</button>
+            <button type="button" class="btn-relay-mobile btn-relay5">PMTAB10</button>
+        </div>
+        <br>
+        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
+            <button type="button" class="btn-relay-mobile btn-relay3">PMTB9</button>
+            <button type="button" class="btn-relay-mobile btn-relay6">PMTB10</button>
         </div>
     </div>
+
 </body>
 
 </html>
