@@ -18,6 +18,8 @@ databaseRelay1.on(
         relay1Read = snapshot.val();
         console.log(relay1Read);
         if (relay1Read == "CLOSE") {
+            document.getElementsByClassName("btn-relay1")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relay1")[1].classList.remove("btn-danger");
             document.getElementsByClassName("btn-relay1")[0].className += " btn-success btn";
             document.getElementsByClassName("btn-relay1")[1].className += " btn-success btn";
         } else {
@@ -33,6 +35,8 @@ databaseRelay2.on(
         relay2Read = snapshot.val();
         console.log(relay2Read);
         if (relay2Read == "CLOSE") {
+            document.getElementsByClassName("btn-relay2")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relay2")[1].classList.remove("btn-danger");
             document.getElementsByClassName("btn-relay2")[0].className += " btn-success btn";
             document.getElementsByClassName("btn-relay2")[1].className += " btn-success btn";
         } else {
@@ -48,6 +52,8 @@ databaseRelay3.on(
         relay3Read = snapshot.val();
         console.log(relay2Read);
         if (relay3Read == "CLOSE") {
+            document.getElementsByClassName("btn-relay3")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relay3")[1].classList.remove("btn-danger");
             document.getElementsByClassName("btn-relay3")[0].className += " btn-success btn";
             document.getElementsByClassName("btn-relay3")[1].className += " btn-success btn";
         } else {
@@ -63,6 +69,8 @@ databaseRelay4.on(
         relay4Read = snapshot.val();
         console.log(relay4Read);
         if (relay4Read == "CLOSE") {
+            document.getElementsByClassName("btn-relay4")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relay4")[1].classList.remove("btn-danger");
             document.getElementsByClassName("btn-relay4")[0].className += " btn-success btn";
             document.getElementsByClassName("btn-relay4")[1].className += " btn-success btn";
         } else {
@@ -78,6 +86,8 @@ databaseRelay5.on(
         relay5Read = snapshot.val();
         console.log(relay5Read);
         if (relay5Read == "CLOSE") {
+            document.getElementsByClassName("btn-relay5")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relay5")[1].classList.remove("btn-danger");
             document.getElementsByClassName("btn-relay5")[0].className += " btn-success btn";
             document.getElementsByClassName("btn-relay5")[1].className += " btn-success btn";
         } else {
@@ -93,6 +103,8 @@ databaseRelay6.on(
         relay6Read = snapshot.val();
         console.log(relay6Read);
         if (relay6Read == "CLOSE") {
+            document.getElementsByClassName("btn-relay6")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relay6")[1].classList.remove("btn-danger");
             document.getElementsByClassName("btn-relay6")[0].className += " btn-success btn";
             document.getElementsByClassName("btn-relay6")[1].className += " btn-success btn";
         } else {
