@@ -1,145 +1,237 @@
-const databaseRelay1 = database.ref("status/PMTA9");
-const databaseRelay2 = database.ref("status/PMTAB9");
-const databaseRelay3 = database.ref("status/PMTB9");
-const databaseRelay4 = database.ref("status/PMTA10");
-const databaseRelay5 = database.ref("status/PMTAB10");
-const databaseRelay6 = database.ref("status/PMTB10");
+const dbPMTA14 = database.ref("status/PMTA14");
+const dbPMTAB14 = database.ref("status/PMTAB14");
+const dbPMTB14 = database.ref("status/PMTB14");
+const dbPMTA15 = database.ref("status/PMTA15");
+const dbPMTAB15 = database.ref("status/PMTAB15");
+const dbPMTB15 = database.ref("status/PMTB15");
+const dbPMTA16 = database.ref("status/PMTA16");
+const dbPMTAB16 = database.ref("status/PMTAB16");
+const dbPMTB16 = database.ref("status/PMTB16");
+const dbPMTA17 = database.ref("status/PMTA17");
+const dbPMTAB17 = database.ref("status/PMTAB17");
+const dbPMTB17 = database.ref("status/PMTB17");
 
-var relay1Read;
-var relay2Read;
-var relay3Read;
-var relay4Read;
-var relay5Read;
-var relay6Read;
+var PMTA14Read;
+var PMTAB14Read;
+var PMTB14Read;
+var PMTA15Read;
+var PMTAB15Read;
+var PMTB15Read;
+var PMTA16Read;
+var PMTAB16Read;
+var PMTB16Read;
+var PMTA17Read;
+var PMTAB17Read;
+var PMTB17Read;
 
-databaseRelay1.on(
+// PMT 14
+dbPMTA14.on(
     "value",
     (snapshot) => {
-        relay1Read = snapshot.val();
-        console.log(relay1Read);
-        if (relay1Read == "CLOSE") {
-            document.getElementsByClassName("btn-relay1")[0].classList.remove("btn-danger");
-            document.getElementsByClassName("btn-relay1")[1].classList.remove("btn-danger");
-            document.getElementsByClassName("btn-relay1")[0].className += " btn-success btn";
-            document.getElementsByClassName("btn-relay1")[1].className += " btn-success btn";
+        PMTA14Read = snapshot.val();
+        console.log(PMTA14Read);
+        if (PMTA14Read == "CLOSE") {
+            document.getElementsByClassName("btn-relayA14")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayA14")[1].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayA14")[0].className += " btn-success btn";
+            document.getElementsByClassName("btn-relayA14")[1].className += " btn-success btn";
         } else {
-            document.getElementsByClassName("btn-relay1")[0].className += " btn-danger btn";
-            document.getElementsByClassName("btn-relay1")[1].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayA14")[0].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayA14")[1].className += " btn-danger btn";
         }
     }
 );
 
-databaseRelay2.on(
+dbPMTAB14.on(
     "value",
     (snapshot) => {
-        relay2Read = snapshot.val();
-        console.log(relay2Read);
-        if (relay2Read == "CLOSE") {
-            document.getElementsByClassName("btn-relay2")[0].classList.remove("btn-danger");
-            document.getElementsByClassName("btn-relay2")[1].classList.remove("btn-danger");
-            document.getElementsByClassName("btn-relay2")[0].className += " btn-success btn";
-            document.getElementsByClassName("btn-relay2")[1].className += " btn-success btn";
+        PMTAB14Read = snapshot.val();
+        console.log(PMTAB14Read);
+        if (PMTAB14Read == "CLOSE") {
+            document.getElementsByClassName("btn-relayAB14")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayAB14")[1].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayAB14")[0].className += " btn-success btn";
+            document.getElementsByClassName("btn-relayAB14")[1].className += " btn-success btn";
         } else {
-            document.getElementsByClassName("btn-relay2")[0].className += " btn-danger btn";
-            document.getElementsByClassName("btn-relay2")[1].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayAB14")[0].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayAB14")[1].className += " btn-danger btn";
         }
     }
 );
 
-databaseRelay3.on(
+dbPMTB14.on(
     "value",
     (snapshot) => {
-        relay3Read = snapshot.val();
-        console.log(relay2Read);
-        if (relay3Read == "CLOSE") {
-            document.getElementsByClassName("btn-relay3")[0].classList.remove("btn-danger");
-            document.getElementsByClassName("btn-relay3")[1].classList.remove("btn-danger");
-            document.getElementsByClassName("btn-relay3")[0].className += " btn-success btn";
-            document.getElementsByClassName("btn-relay3")[1].className += " btn-success btn";
+        PMTB14Read = snapshot.val();
+        console.log(PMTAB14Read);
+        if (PMTB14Read == "CLOSE") {
+            document.getElementsByClassName("btn-relayB14")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayB14")[1].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayB14")[0].className += " btn-success btn";
+            document.getElementsByClassName("btn-relayB14")[1].className += " btn-success btn";
         } else {
-            document.getElementsByClassName("btn-relay3")[0].className += " btn-danger btn";
-            document.getElementsByClassName("btn-relay3")[1].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayB14")[0].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayB14")[1].className += " btn-danger btn";
+        }
+    }
+);
+// ================= EOF PMT 14 ======================
+
+// PMT 15
+dbPMTA15.on(
+    "value",
+    (snapshot) => {
+        PMTA15Read = snapshot.val();
+        console.log(PMTA15Read);
+        if (PMTA15Read == "CLOSE") {
+            document.getElementsByClassName("btn-relayA15")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayA15")[1].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayA15")[0].className += " btn-success btn";
+            document.getElementsByClassName("btn-relayA15")[1].className += " btn-success btn";
+        } else {
+            document.getElementsByClassName("btn-relayA15")[0].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayA15")[1].className += " btn-danger btn";
         }
     }
 );
 
-databaseRelay4.on(
+dbPMTAB15.on(
     "value",
     (snapshot) => {
-        relay4Read = snapshot.val();
-        console.log(relay4Read);
-        if (relay4Read == "CLOSE") {
-            document.getElementsByClassName("btn-relay4")[0].classList.remove("btn-danger");
-            document.getElementsByClassName("btn-relay4")[1].classList.remove("btn-danger");
-            document.getElementsByClassName("btn-relay4")[0].className += " btn-success btn";
-            document.getElementsByClassName("btn-relay4")[1].className += " btn-success btn";
+        PMTAB15Read = snapshot.val();
+        console.log(PMTAB15Read);
+        if (PMTAB15Read == "CLOSE") {
+            document.getElementsByClassName("btn-relayAB15")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayAB15")[1].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayAB15")[0].className += " btn-success btn";
+            document.getElementsByClassName("btn-relayAB15")[1].className += " btn-success btn";
         } else {
-            document.getElementsByClassName("btn-relay4")[0].className += " btn-danger btn";
-            document.getElementsByClassName("btn-relay4")[1].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayAB15")[0].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayAB15")[1].className += " btn-danger btn";
         }
     }
 );
 
-databaseRelay5.on(
+dbPMTB15.on(
     "value",
     (snapshot) => {
-        relay5Read = snapshot.val();
-        console.log(relay5Read);
-        if (relay5Read == "CLOSE") {
-            document.getElementsByClassName("btn-relay5")[0].classList.remove("btn-danger");
-            document.getElementsByClassName("btn-relay5")[1].classList.remove("btn-danger");
-            document.getElementsByClassName("btn-relay5")[0].className += " btn-success btn";
-            document.getElementsByClassName("btn-relay5")[1].className += " btn-success btn";
+        PMTB15Read = snapshot.val();
+        console.log(PMTB15Read);
+        if (PMTB15Read == "CLOSE") {
+            document.getElementsByClassName("btn-relayB15")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayB15")[1].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayB15")[0].className += " btn-success btn";
+            document.getElementsByClassName("btn-relayB15")[1].className += " btn-success btn";
         } else {
-            document.getElementsByClassName("btn-relay5")[0].className += " btn-danger btn";
-            document.getElementsByClassName("btn-relay5")[1].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayB15")[0].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayB15")[1].className += " btn-danger btn";
+        }
+    }
+);
+// ================= EOF PMT 15 ======================
+
+// PMT 16
+dbPMTA16.on(
+    "value",
+    (snapshot) => {
+        PMTA16Read = snapshot.val();
+        console.log(PMTA16Read);
+        if (PMTA16Read == "CLOSE") {
+            document.getElementsByClassName("btn-relayA16")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayA16")[1].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayA16")[0].className += " btn-success btn";
+            document.getElementsByClassName("btn-relayA16")[1].className += " btn-success btn";
+        } else {
+            document.getElementsByClassName("btn-relayA16")[0].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayA16")[1].className += " btn-danger btn";
         }
     }
 );
 
-databaseRelay6.on(
+dbPMTAB16.on(
     "value",
     (snapshot) => {
-        relay6Read = snapshot.val();
-        console.log(relay6Read);
-        if (relay6Read == "CLOSE") {
-            document.getElementsByClassName("btn-relay6")[0].classList.remove("btn-danger");
-            document.getElementsByClassName("btn-relay6")[1].classList.remove("btn-danger");
-            document.getElementsByClassName("btn-relay6")[0].className += " btn-success btn";
-            document.getElementsByClassName("btn-relay6")[1].className += " btn-success btn";
+        PMTAB16Read = snapshot.val();
+        console.log(PMTAB16Read);
+        if (PMTAB16Read == "CLOSE") {
+            document.getElementsByClassName("btn-relayAB16")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayAB16")[1].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayAB16")[0].className += " btn-success btn";
+            document.getElementsByClassName("btn-relayAB16")[1].className += " btn-success btn";
         } else {
-            document.getElementsByClassName("btn-relay6")[0].className += " btn-danger btn";
-            document.getElementsByClassName("btn-relay6")[1].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayAB16")[0].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayAB16")[1].className += " btn-danger btn";
         }
     }
 );
 
-// fungsi untuk mengganti state relay jika menekan button
-// function relayControl(relayID) {
-//     const dbRelay = database.ref(relayID + "/status");
-//     dbRelay.get().then((snapshot) => {
-//         if (snapshot.exists()) {
-//             console.log(snapshot.val());
+dbPMTB16.on(
+    "value",
+    (snapshot) => {
+        PMTB16Read = snapshot.val();
+        console.log(PMTB16Read);
+        if (PMTB16Read == "CLOSE") {
+            document.getElementsByClassName("btn-relayB16")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayB16")[1].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayB16")[0].className += " btn-success btn";
+            document.getElementsByClassName("btn-relayB16")[1].className += " btn-success btn";
+        } else {
+            document.getElementsByClassName("btn-relayB16")[0].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayB16")[1].className += " btn-danger btn";
+        }
+    }
+);
+// ================= EOF PMT 16 ======================
 
-//             // flip-flop
-//             // jika relay on trs ditekan maka langsung off
-//             // pembacaan firebase hanya sekali shg tdk error
-//             const relayRead = snapshot.val();
-//             if (relayRead == "on") {
-//                 database.ref(relayID).set({
-//                     status: "off"
-//                 });
-//                 return;
-//             } else {
-//                 database.ref(relayID).set({
-//                     status: "on"
-//                 });
-//                 return;
-//             }
-//         } else {
-//             console.log("No data available");
-//         }
-//     }).catch((error) => {
-//         console.error(error);
-//     });
-// }
+// PMT 17
+dbPMTA17.on(
+    "value",
+    (snapshot) => {
+        PMTA17Read = snapshot.val();
+        console.log(PMTA17Read);
+        if (PMTA17Read == "CLOSE") {
+            document.getElementsByClassName("btn-relayA17")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayA17")[1].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayA17")[0].className += " btn-success btn";
+            document.getElementsByClassName("btn-relayA17")[1].className += " btn-success btn";
+        } else {
+            document.getElementsByClassName("btn-relayA17")[0].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayA17")[1].className += " btn-danger btn";
+        }
+    }
+);
+
+dbPMTAB17.on(
+    "value",
+    (snapshot) => {
+        PMTAB17Read = snapshot.val();
+        console.log(PMTAB17Read);
+        if (PMTAB17Read == "CLOSE") {
+            document.getElementsByClassName("btn-relayAB17")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayAB17")[1].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayAB17")[0].className += " btn-success btn";
+            document.getElementsByClassName("btn-relayAB17")[1].className += " btn-success btn";
+        } else {
+            document.getElementsByClassName("btn-relayAB17")[0].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayAB17")[1].className += " btn-danger btn";
+        }
+    }
+);
+
+dbPMTB17.on(
+    "value",
+    (snapshot) => {
+        PMTB17Read = snapshot.val();
+        console.log(PMTB17Read);
+        if (PMTB17Read == "CLOSE") {
+            document.getElementsByClassName("btn-relayB17")[0].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayB17")[1].classList.remove("btn-danger");
+            document.getElementsByClassName("btn-relayB17")[0].className += " btn-success btn";
+            document.getElementsByClassName("btn-relayB17")[1].className += " btn-success btn";
+        } else {
+            document.getElementsByClassName("btn-relayB17")[0].className += " btn-danger btn";
+            document.getElementsByClassName("btn-relayB17")[1].className += " btn-danger btn";
+        }
+    }
+);
+// ================= EOF PMT 17 ======================
