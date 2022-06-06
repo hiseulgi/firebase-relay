@@ -1,18 +1,117 @@
 html { overflow-y: hidden; }
 
 .btn-relay{
-    display: inline-block;
-    margin-right: 1.6em;
-    margin-left: 1.6em;
-    width: 80px;
-    display: inline-block;
     transform:rotate(-90deg);
 }
 
-.btn-relay-mobile{
-    display: inline-block;
-    margin-right: 1.6em;
-    margin-left: 1.6em;
-    width: 75px;
-    display: inline-block;
+@media screen and (max-width: 500px) {
+    .roww{
+        margin-top: 12%;
+    }
+    .rowww{
+        margin-top: 32%;
+    }
+    .rowwww{
+        margin-top: 51.5%;
+    }
+    .btn-relay{
+        height: 30px;
+        align-items: center; 
+        width: auto;
+        line-height: 10px;
+    }
+    .a{
+        margin-left: 15%;
+    }
+    .b{
+        margin-left: 5%;
+    }
+    .c{
+        margin-left: 5%;
+    }
+    .d{
+        margin-left: 110%;
+        margin-top: -25%;
+    }
+    .e{
+        margin-left: 15%;
+    }
+    .f{
+        margin-left: 3%;
+    }
+    .g{
+        margin-left: 3%;
+    }
+    .h{
+        margin-left: 100%;
+        margin-top: -20%;
+    }
+    .i{
+        margin-left: 15%;
+    }
+    .j{
+        margin-left: 6%;
+    }
+    .k{
+        margin-left: 3%;
+    }
+    .l{
+        margin-left: 108%;
+        margin-top: -24%;
+    }
+    .btntxt{
+        font-size: 8px;
+     
+    }
+}
+@media screen and (min-width :500px){
+    .immage{
+        margin-top: 40px;
+        margin-left: 350px;
+    }
+    .roww{
+        margin-top: 130px;
+    }
+    .rowww{
+        margin-top: 280px;
+    }
+    .rowwww{
+        margin-top: 420px;
+    }
+    .a{
+        margin-left: 430px;
+    }
+    .b{
+        margin-left: 50px;
+    }
+    .c{
+        margin-left: 50px;
+    }
+    .d{
+        margin-left: 45px;
+    }
+    .e{
+        margin-left: 425px;
+    }
+    .f{
+        margin-left: 38px;
+    }
+    .g{
+        margin-left: 40px;
+    }
+    .h{
+        margin-left: 40px;
+    }
+    .i{
+        margin-left: 425px;
+    }
+    .j{
+        margin-left: 50px;
+    }
+    .k{
+        margin-left: 50px;
+    }
+    .l{
+        margin-left: 50px;
+    }
 }

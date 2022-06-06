@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiMontok</title>
+    <link href='img/icon.png' rel='shortcut icon'>
+    <link rel="stylesheet" type="text/css" href="styles copy.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="/__/firebase/6.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBV6o9aN2sAaWco5IbKqs2UpKS850_98io",
+            authDomain: "fir-relay-1fd67.firebaseapp.com",
+            databaseURL: "https://fir-relay-1fd67-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "fir-relay-1fd67",
+            storageBucket: "fir-relay-1fd67.appspot.com",
+            messagingSenderId: "422287883284",
+            appId: "1:422287883284:web:f175bf0e2ef777b1233b01"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+    </script>
+    <script src="app.js" defer></script>
+    <script src="sketch.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" width="50" height="50" alt="">
+        </a>
+        <h3>Sistem Pemantau Pemutus Tenaga Gardu Induk Tambak Lorok</h3>
+        <a href="tabel.html">
+            <button type="button btn-lg" class="btn btn-primary btn-sm">History PMT</button>
+        </a>
+    </nav>
+
+    <!-- display on desktop web -->
+    <div class="container d-none d-md-block" style="text-align:center">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
+            <button type="button" class="btn-relay btn-relayA14">PMTA14</button>
+            <button type="button" class="btn-relay btn-relayA15">PMTA15</button>
+            <button type="button" class="btn-relay btn-relayA16">PMTA16</button>
+            <button type="button" class="btn-relay btn-relayA17">PMTA17</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
+            <button type="button" class="btn-relay btn-relayAB14">PMTAB14</button>
+            <button type="button" class="btn-relay btn-relayAB15">PMTAB15</button>
+            <button type="button" class="btn-relay btn-relayAB16">PMTAB16</button>
+            <button type="button" class="btn-relay btn-relayAB17">PMTAB17</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
+            <button type="button" class="btn-relay btn-relayB14">PMTB14</button>
+            <button type="button" class="btn-relay btn-relayB15">PMTB15</button>
+            <button type="button" class="btn-relay btn-relayB16">PMTB16</button>
+            <button type="button" class="btn-relay btn-relayB17">PMTB17</button>
+        </div>
+    </div>
+
+    <!-- display on mobile web -->
+    <div class="container d-block d-md-none" style="text-align:center">
+        <br>
+        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
+            <button type="button" class="btn-relay-mobile btn-relayA14">PMTA14</button>
+            <button type="button" class="btn-relay-mobile btn-relayA15">PMTA15</button>
+            <button type="button" class="btn-relay-mobile btn-relayA16">PMTA16</button>
+            <button type="button" class="btn-relay-mobile btn-relayA17">PMTA17</button>
+        </div>
+        <br>
+        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
+            <button type="button" class="btn-relay-mobile btn-relayAB14">PMTAB14</button>
+            <button type="button" class="btn-relay-mobile btn-relayAB15">PMTAB15</button>
+            <button type="button" class="btn-relay-mobile btn-relayAB16">PMTAB16</button>
+            <button type="button" class="btn-relay-mobile btn-relayAB17">PMTAB117</button>
+        </div>
+        <br>
+        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
+            <button type="button" class="btn-relay-mobile btn-relayB14">PMTB14</button>
+            <button type="button" class="btn-relay-mobile btn-relayB15">PMTB15</button>
+            <button type="button" class="btn-relay-mobile btn-relayB16">PMTB16</button>
+            <button type="button" class="btn-relay-mobile btn-relayB17">PMTB17</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

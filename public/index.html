@@ -42,7 +42,7 @@
         var database = firebase.database();
     </script>
     <script src="app.js" defer></script>
-    <script src="sketch.js" defer></script>
+    <!-- <script src="sketch.js" defer></script> -->
 </head>
 
 <body>
@@ -56,66 +56,34 @@
         </a>
     </nav>
 
-    <!-- display on desktop web -->
-    <div class="container d-none d-md-block" style="text-align:center">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
-            <button type="button" class="btn-relay btn-relayA14">PMTA14</button>
-            <button type="button" class="btn-relay btn-relayA15">PMTA15</button>
-            <button type="button" class="btn-relay btn-relayA16">PMTA16</button>
-            <button type="button" class="btn-relay btn-relayA17">PMTA17</button>
+    <div class="container-fluid">
+        <div class="immage" style="position: fixed;z-index: -1;">
+            <img src="img/sketch.png" class="img-fluid" alt="">
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
-            <button type="button" class="btn-relay btn-relayAB14">PMTAB14</button>
-            <button type="button" class="btn-relay btn-relayAB15">PMTAB15</button>
-            <button type="button" class="btn-relay btn-relayAB16">PMTAB16</button>
-            <button type="button" class="btn-relay btn-relayAB17">PMTAB17</button>
+        <div class="row roww"  style="position: fixed;">
+            <div class="col-12">
+                <button type="button" class="btn btn-relay a btn-relayA14"><span class="btntxt">PMTA14</span></button>
+                <button type="button" class="btn btn-relay b btn-relayA15"><span class="btntxt">PMTA15</span></button>
+                <button type="button" class="btn btn-relay c btn-relayA16"><span class="btntxt">PMTA16</span></button>
+                <button type="button" class="btn btn-relay d btn-relayA17"><span class="btntxt">PMTA17</span></button>
+            </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
-            <button type="button" class="btn-relay btn-relayB14">PMTB14</button>
-            <button type="button" class="btn-relay btn-relayB15">PMTB15</button>
-            <button type="button" class="btn-relay btn-relayB16">PMTB16</button>
-            <button type="button" class="btn-relay btn-relayB17">PMTB17</button>
+        <div class="row rowww" style="position: fixed;">
+            <div class="col-12">
+                <button type="button" class="btn btn-relay e btn-relayAB14"><span class="btntxt">PMTAB14</span></button>
+                <button type="button" class="btn btn-relay f btn-relayAB15"><span class="btntxt">PMTAB15</span></button>
+                <button type="button" class="btn btn-relay g btn-relayAB16"><span class="btntxt">PMTAB16</span></button>
+                <button type="button" class="btn btn-relay h btn-relayAB17"><span class="btntxt">PMTAB17</span></button>
+            </div>
+        </div>
+        <div class="row rowwww" style="position: fixed;">
+            <div class="col-12">
+                <button type="button" class="btn btn-relay i btn-relayB14"><span class="btntxt">PMTB14</span></button>
+                <button type="button" class="btn btn-relay j btn-relayB15"><span class="btntxt">PMTB15</span></button>
+                <button type="button" class="btn btn-relay k btn-relayB16"><span class="btntxt">PMTB16</span></button>
+                <button type="button" class="btn btn-relay l btn-relayB17"><span class="btntxt">PMTB17</span></button>
+            </div>
         </div>
     </div>
-
-    <!-- display on mobile web -->
-    <div class="container d-block d-md-none" style="text-align:center">
-        <br>
-        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
-            <button type="button" class="btn-relay-mobile btn-relayA14">PMTA14</button>
-            <button type="button" class="btn-relay-mobile btn-relayA15">PMTA15</button>
-            <button type="button" class="btn-relay-mobile btn-relayA16">PMTA16</button>
-            <button type="button" class="btn-relay-mobile btn-relayA17">PMTA17</button>
-        </div>
-        <br>
-        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
-            <button type="button" class="btn-relay-mobile btn-relayAB14">PMTAB14</button>
-            <button type="button" class="btn-relay-mobile btn-relayAB15">PMTAB15</button>
-            <button type="button" class="btn-relay-mobile btn-relayAB16">PMTAB16</button>
-            <button type="button" class="btn-relay-mobile btn-relayAB17">PMTAB117</button>
-        </div>
-        <br>
-        <div class="btn-group-sm" role="group" aria-label="Relay Buttons">
-            <button type="button" class="btn-relay-mobile btn-relayB14">PMTB14</button>
-            <button type="button" class="btn-relay-mobile btn-relayB15">PMTB15</button>
-            <button type="button" class="btn-relay-mobile btn-relayB16">PMTB16</button>
-            <button type="button" class="btn-relay-mobile btn-relayB17">PMTB17</button>
-        </div>
-    </div>
-
 </body>
-
 </html>
